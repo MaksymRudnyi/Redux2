@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/expect/1.20.2/expect.min.js"></script>
+</head>
+<body>
+
+</body>
+
+<script>
+    const addCounter = (list) => {
+        return [...list, 1];
+    };
+
+    const removeCounter = (list, index) => {
+
+    }
+    const testAddCounter = () => {
+    	const listBefore = [],
+            listAfter = [1];
+
+		Object.freeze(listBefore);
+
+    	expect(addCounter(listBefore)).toEqual(listAfter);
+    };
+
+    const testRemoveCounter = () => {
+    	const listBefore = [0, 10, 20],
+            listAfter = [0, 10];
+
+    	expect(removeCounter(listBefore, 2)).toEqual(listAfter)
+    }
+
+	testAddCounter();
+	testRemoveCounter();
+	console.log('All tests passed ok')
+</script>
+</html>

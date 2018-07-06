@@ -12,11 +12,14 @@
 <script>
 	const toggleTodo = (todo) => {
         /*
+        mutation
         todo.completed = !todo.completed;
         return todo;
         */
 
-        /*return Object.assign({}, todo, {
+        /*
+        needs to use Babel, Object.assign is a new feature
+        return Object.assign({}, todo, {
         	completed: !todo.completed
         })
         */
